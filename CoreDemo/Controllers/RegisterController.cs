@@ -9,7 +9,7 @@ namespace CoreDemo.Controllers
 {
     public class RegisterController : Controller
     {
-		WriterManager wm = new WriterManager(new EFWriterRepository());
+		WriterManager wm = new WriterManager(new EfWriterRepository());
 
 		[HttpGet]
         public IActionResult Index()
@@ -25,7 +25,7 @@ namespace CoreDemo.Controllers
             {
 				p.WriterStatus = true;
 				p.WriterAbout = "Deneme Test";
-				wm.WriterAdd(p);
+				wm.TAdd(p);
 				return RedirectToAction("Index", "Blog");
 			}
             else
