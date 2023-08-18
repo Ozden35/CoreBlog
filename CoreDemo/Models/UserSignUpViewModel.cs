@@ -23,5 +23,10 @@ namespace CoreDemo.Models
         [Display(Name = "Kullanıcı Adı")]
         [Required(ErrorMessage = "Lütfen Kullanıcı adınızı giriniz")]
         public string UserName { get; set; }
+
+
+        [Display(Name = "Profil Fotoğrafı")]
+        [Required(ErrorMessage = "Lütfen profil fotoğrafı giriniz.")]
+        public string ImageUrl { get; set; }
     }
 }

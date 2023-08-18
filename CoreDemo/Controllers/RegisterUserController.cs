@@ -31,7 +31,8 @@ namespace CoreDemo.Controllers
                 {
                     Email = p.Mail,
                     UserName = p.UserName,
-                    NameSurname = p.nameSurname
+                    NameSurname = p.nameSurname,
+                    ImageUrl = p.ImageUrl
                 };
 
                 var result = await _userManager.CreateAsync(user, p.Password);
