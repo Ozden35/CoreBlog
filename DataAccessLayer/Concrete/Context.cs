@@ -43,6 +43,8 @@ namespace DataAccessLayer.Concrete
 
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Blog>().ToTable(tb => tb.HasTrigger("TriggerName"));
+
             //HomeMatches-->WriterSender
             //AwayMatches-->WriterReceiver
 
