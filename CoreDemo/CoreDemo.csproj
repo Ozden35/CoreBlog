@@ -38,6 +38,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Test\Controller\Views\" />
+    <Folder Include="Views\AdminMessage\" />
     <Folder Include="wwwroot\WriterImageFiles\" />
   </ItemGroup>
 
