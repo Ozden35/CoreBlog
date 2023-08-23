@@ -59,7 +59,7 @@ namespace CoreDemo.Areas.Admin.Controllers
             var values = _roleManager.Roles.FirstOrDefault(x => x.Id == id);
             RoleUpdateViewModel model = new RoleUpdateViewModel
             {
-                id = values.Id,
+                Id = values.Id,
                 name = values.Name
             };
 
@@ -68,7 +68,7 @@ namespace CoreDemo.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateRole(RoleUpdateViewModel model)
         {
-            var values = _roleManager.Roles.Where(x => x.Id == model.id).FirstOrDefault();
+            var values = _roleManager.Roles.Where(x => x.Id == model.Id).FirstOrDefault();
             values.Name = model.name;
             var result = await _roleManager.UpdateAsync(values);
             if (result.Succeeded)
